@@ -1,0 +1,12 @@
+[Service]
+Type=idle
+Restart=always
+RestartSec=4
+StartLimitBurst=0
+User=rpzw
+WorkingDirectory=/home/rpzw/morse/
+EnvironmentFile=/home/rpzw/morse/.config
+ExecStart=/home/rpzw/morse/env/bin/python3 bot.py
+
+[Install]
+WantedBy=multi-user.target
